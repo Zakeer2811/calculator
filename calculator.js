@@ -36,21 +36,18 @@ function backSpace() {
 function changeSign() {
   const expr = resultField.value.trim();
 
-  // If the expression is a standalone number, simply change its sign.
+
   if (/^-?\d+(\.\d+)?$/.test(expr)) {
     resultField.value = (-parseFloat(expr)).toString();
     justCalculated = false;
     return;
   }
 
-  // Use regex to find the last number in the expression.
-  // This regex looks for an optional minus sign followed by one or more digits,
-  // optionally with a decimal portion, anchored at the end of the string.
   resultField.value = expr.replace(
     /(-?\d+(\.\d+)?)\s*$/,
     (match, numberStr) => {
       const num = parseFloat(numberStr);
-      // Toggle the sign of the captured number.
+
       return (-num).toString();
     }
   );
