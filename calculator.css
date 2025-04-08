@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: radial-gradient(circle at top left, #1b1b2f, #1f4068);
+}
+
+.main-container {
+  width: 100%;
+  max-width: 550px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(to bottom right, #16213e, #0f3460);
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+  text-align: center;
+  color: #00f7ff;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 5px rgba(0, 255, 255, 0.3);
+}
+
+input {
+  width: 100%;
+  font-size: 3em;
+  text-align: right;
+  padding: 15px;
+  background-color: #1b1b2f;
+  color: #00ffb3;
+  border: none;
+  border-radius: 10px;
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.5);
+  outline: none;
+}
+
+input:focus {
+  border: 2px solid #00ffb3;
+}
+
+.button-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  padding: 20px 10px 10px;
+}
+
+.button-container button {
+  height: 75px;
+  font-size: 1.8em;
+  background-color: #e94560;
+  color: #fff;
+  border: none;
+  border-radius: 15px;
+  transition: all 0.25s ease-in-out;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.button-container button:hover {
+  background-color: #ff2e63;
+  transform: translateY(-4px);
+}
+
+.button-container button:active {
+  background-color: #c9184a;
+  transform: translateY(0);
+}
+
+/* Equal (=) button - standout color */
+.button-container button:nth-child(26) {
+  grid-column: 2 / span 3;
+  background-color: #00ffb3;
+  color: #16213e;
+  font-weight: bold;
+}
+
+.button-container button:nth-child(26):hover {
+  background-color: #00f7ff;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+  .main-container {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .button-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .button-container button {
+    font-size: 1.5em;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+}
