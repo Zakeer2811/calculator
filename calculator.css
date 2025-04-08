@@ -1,4 +1,3 @@
-
 * {
   margin: 0;
   padding: 0;
@@ -10,7 +9,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: radial-gradient(circle at top left, #000, #00bfff);
+  background: radial-gradient(circle at top left, #44e9ffc9, #e60db7);
 }
 .main-container {
   width: 100%;
@@ -56,14 +55,14 @@ input:focus {
   font-size: 1.8em;
   background-color: #fff;
   color: #000;
-  border: 2px solid #000; /* Black border */
+  border: 2px solid #000;
   border-radius: 15px;
   transition: all 0.25s ease-in-out;
   cursor: pointer;
   box-shadow: 0 4px 8px rgba(255, 255, 255, 0.3);
 }
 .button-container button:hover {
-  background-color: hsl(0, 2%, 73%); /* New hover color */
+  background-color: hsl(0, 2%, 73%); 
   color: #000;
   transform: translateY(-4px);
 }
@@ -76,7 +75,7 @@ input:focus {
   background-color: #fff;
   color: #000;
   font-weight: bold;
-  border: 2px solid #000; /* Black border */
+  border: 2px solid #000; 
 }
 .button-container button:nth-child(26):hover {
   background-color: hsl(0, 13%, 92%);
